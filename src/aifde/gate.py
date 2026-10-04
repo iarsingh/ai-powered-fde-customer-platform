@@ -7,5 +7,6 @@ def check(body):
         raise InputError("body must be an object")
     failed = []
 
-    if not body.get("constraint"): failed.append("constraint")\n    if not body.get("metric"): failed.append("metric")
+    if not body.get("constraint"): failed.append("constraint")
+    if not body.get("metric"): failed.append("metric")
     return {"passed": not failed, "failed": failed, "applied": False}
